@@ -12,6 +12,6 @@ window.onload = function() {
 	];
 
 	_.each(messages, function(message){
-		$("body").append(message);
+		$("body").append($("<p>").text(message));
 	});
 }

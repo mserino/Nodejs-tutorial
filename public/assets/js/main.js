@@ -1,4 +1,22 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var alertstars = require('./lib/alertstars');
+var _ = require("underscore");
+var $ = require("jquery")
+
+window.onload = function() {
+
+	var messages = [
+		"Welcome!",
+		"This is my new page!",
+		"Do you like it?",
+		"I guess you couldn't answer, huh?"
+	];
+
+	_.each(messages, function(message){
+		$("body").append($("<p>").text(message));
+	});
+}
+},{"./lib/alertstars":4,"jquery":2,"underscore":3}],2:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -9190,7 +9208,7 @@ return jQuery;
 
 }));
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 //     Underscore.js 1.7.0
 //     http://underscorejs.org
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -10607,26 +10625,8 @@ return jQuery;
   }
 }.call(this));
 
-},{}],3:[function(require,module,exports){
-module.exports = function alertstars(message) {
-	alert("***** " + message + " *****");
-}
 },{}],4:[function(require,module,exports){
-var alertstars = require('./lib/alertstars');
-var _ = require("underscore");
-var $ = require("jquery")
-
-window.onload = function() {
-
-	var messages = [
-		"Welcome!",
-		"This is my new page!",
-		"Do you like it?",
-		"I guess you couldn't answer, huh?"
-	];
-
-	_.each(messages, function(message){
-		$("body").append(message);
-	});
+module.exports = function alertstars(message) {
+	alert("***** === " + message + " === *****");
 }
-},{"./lib/alertstars":3,"jquery":1,"underscore":2}]},{},[4]);
+},{}]},{},[1]);
